@@ -5,22 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIMI NUMBER SURESHOTE</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- ✅ META PIXEL CODE -->
+  <!-- META PIXEL -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '929851373417599');
-    fbq('track', 'PageView');
+
+    // IMPORTANT: delay se fire karo (vercel me issue fix)
+    setTimeout(function() {
+      fbq('track', 'PageView');
+    }, 500);
   </script>
 
   <noscript>
@@ -34,89 +38,49 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #020617, #0a0f2c);
       color: white;
-      text-align: center;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 400px;
-      width: 100%;
+      text-align: center;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 22px;
       color: #00ffaa;
-      font-weight: 700;
-      white-space: nowrap;
     }
 
     p {
-      font-size: 15px;
       color: #cbd5f5;
-      margin: 10px 0;
-    }
-
-    .highlight {
-      color: #38bdf8;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #ff3b3b;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 12px;
-      margin: 10px 0;
+      margin: 8px 0;
     }
 
     .btn {
-      display: inline-block;
-      padding: 15px 25px;
+      margin-top: 15px;
+      padding: 14px 25px;
       background: linear-gradient(90deg, #00ffaa, #00cc88);
       color: black;
-      font-size: 17px;
       border-radius: 10px;
       text-decoration: none;
-      font-weight: 600;
-      margin-top: 15px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: linear-gradient(90deg, #00cc88, #00ffaa);
-      color: white;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<div>
   <h1>DIMI NUMBER SURESHOTE 💸</h1>
-
   <p>Daily Sure Shot Number & Earning Tips</p>
-  <p class="highlight">Earn Money With DIMI 🚀</p>
+  <p>Earn Money With DIMI 🚀</p>
 
-  <div class="badge">LIMITED ACCESS</div>
-
-  <!-- ✅ BUTTON WITH TRACKING -->
+  <!-- BUTTON -->
   <a href="https://t.me/+OUODd3l_hhYyZDY1" 
      class="btn" 
-     onclick="trackClick()">Join Telegram Now</a>
+     onclick="fbq('track','Lead')">
+     Join Telegram Now
+  </a>
 </div>
-
-<!-- ✅ CLICK TRACK -->
-<script>
-  function trackClick() {
-    fbq('track', 'Lead'); // jab button click hoga
-  }
-</script>
 
 </body>
 </html>
