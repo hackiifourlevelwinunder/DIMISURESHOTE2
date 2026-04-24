@@ -1,111 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIMI NUMBER SURESHOTE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIMI NUMBER SURESHOTE</title>
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- ✅ NEW META PIXEL -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '1158459019711676');
-  fbq('track', 'PageView');
-  </script>
+fbq('init', '1158459019711676');
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1158459019711676&ev=PageView&noscript=1"/>
-  </noscript>
+// 🔥 MULTIPLE FORCE EVENTS
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #0a0f2c, #020617);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+// DOM load pe dubara fire
+document.addEventListener("DOMContentLoaded", function () {
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+});
 
-    .box {
-      max-width: 420px;
-      width: 100%;
-      padding: 30px 20px;
-    }
+// Scroll detect (Event tool pakdega)
+window.addEventListener("scroll", function () {
+    fbq('trackCustom', 'ScrollView');
+}, { once: true });
 
-    h1 {
-      font-size: 26px;
-      color: #00ffaa;
-      margin-bottom: 10px;
-    }
+// Auto event after delay
+setTimeout(function(){
+    fbq('track', 'ViewContent');
+}, 1500);
 
-    p {
-      font-size: 15px;
-      color: #cbd5f5;
-      margin: 6px 0;
-    }
+</script>
 
-    .main-line {
-      color: #38bdf8;
-      font-weight: 600;
-      margin-top: 10px;
-    }
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1158459019711676&ev=PageView&noscript=1"/>
+</noscript>
 
-    .sub-line {
-      color: #94a3b8;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
+<style>
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#020617;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 16px 30px;
-      background: linear-gradient(90deg, #00ffaa, #00cc88);
-      color: black;
-      font-size: 17px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 0 20px rgba(0,255,170,0.5);
-      transition: 0.3s;
-    }
+.box {max-width:400px;}
 
-    .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(90deg, #00cc88, #00ffaa);
-      color: white;
-    }
-  </style>
+h1 {color:#00ffaa;}
+
+p {color:#cbd5f5;}
+
+.btn {
+  margin-top:15px;
+  padding:15px 25px;
+  background:#00ffaa;
+  color:black;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+</style>
+
 </head>
 
 <body>
 
 <div class="box">
   <h1>DIMI NUMBER SURESHOTE 💸</h1>
+  <p>Turn simple tricks into daily earning opportunities 🚀</p>
 
-  <p>Daily Sure Shot Number Tips</p>
-
-  <p class="main-line">Turn simple tricks into daily earning opportunities 🚀</p>
-  <p class="sub-line">Join now and start your smart earning journey today</p>
-
+  <!-- 🔥 IMPORTANT BUTTON -->
   <a href="https://t.me/+OUODd3l_hhYyZDY1"
      class="btn"
-     onclick="fbq('track','Lead')">
+     onclick="fbq('track','Lead'); fbq('trackCustom','ButtonClick');">
      Join Telegram Now
   </a>
 </div>
