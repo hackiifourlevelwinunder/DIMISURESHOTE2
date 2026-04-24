@@ -20,26 +20,9 @@ s.parentNode.insertBefore(t,s)}
 
 fbq('init', '1158459019711676');
 
-// 🔥 MULTIPLE FORCE EVENTS
+// EVENTS
 fbq('track', 'PageView');
 fbq('track', 'ViewContent');
-
-// DOM load pe dubara fire
-document.addEventListener("DOMContentLoaded", function () {
-    fbq('track', 'PageView');
-    fbq('track', 'ViewContent');
-});
-
-// Scroll detect (Event tool pakdega)
-window.addEventListener("scroll", function () {
-    fbq('trackCustom', 'ScrollView');
-}, { once: true });
-
-// Auto event after delay
-setTimeout(function(){
-    fbq('track', 'ViewContent');
-}, 1500);
-
 </script>
 
 <noscript>
@@ -51,7 +34,7 @@ src="https://www.facebook.com/tr?id=1158459019711676&ev=PageView&noscript=1"/>
 body {
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#020617;
+  background: radial-gradient(circle at top, #0a0f2c, #020617);
   color:white;
   display:flex;
   justify-content:center;
@@ -60,20 +43,21 @@ body {
   text-align:center;
 }
 
-.box {max-width:400px;}
+.box {max-width:420px;}
 
-h1 {color:#00ffaa;}
+h1 {color:#00ffaa; font-size:26px;}
 
 p {color:#cbd5f5;}
 
 .btn {
-  margin-top:15px;
-  padding:15px 25px;
-  background:#00ffaa;
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 30px;
+  background:linear-gradient(90deg,#00ffaa,#00cc88);
   color:black;
-  border-radius:10px;
-  text-decoration:none;
+  border-radius:12px;
   font-weight:600;
+  text-decoration:none;
 }
 </style>
 
@@ -83,15 +67,27 @@ p {color:#cbd5f5;}
 
 <div class="box">
   <h1>DIMI NUMBER SURESHOTE 💸</h1>
+
   <p>Turn simple tricks into daily earning opportunities 🚀</p>
 
-  <!-- 🔥 IMPORTANT BUTTON -->
+  <!-- ✅ TOOL FRIENDLY BUTTON -->
   <a href="https://t.me/+OUODd3l_hhYyZDY1"
+     id="joinBtn"
+     role="button"
      class="btn"
-     onclick="fbq('track','Lead'); fbq('trackCustom','ButtonClick');">
+     target="_blank">
      Join Telegram Now
   </a>
+
 </div>
+
+<!-- 🔥 CLICK TRACK (BEST METHOD) -->
+<script>
+document.getElementById("joinBtn").addEventListener("click", function () {
+    fbq('track', 'Lead');
+    fbq('track', 'Subscribe');
+});
+</script>
 
 </body>
 </html>
